@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://poodle-care.github.io/sitemap.xml
