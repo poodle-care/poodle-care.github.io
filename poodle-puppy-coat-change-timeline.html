@@ -122,6 +122,50 @@
         <p>By following a moral timeline, you honour that heritage. Our <a href="/about.html">about page</a> explains why we prioritise ethics over shortcuts.</p>
     </section>
 
+    <table>
+      <thead>
+        <tr>
+          <th>Age</th>
+          <th>Coat stage</th>
+          <th>What you see</th>
+          <th>Grooming priority</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0–4 months</td>
+          <td>Full puppy coat</td>
+          <td>Soft, wavy, low-curl fluff; minimal matting</td>
+          <td>Light brushing 2–3×/week to build tolerance</td>
+        </tr>
+        <tr style="background:#f9fafb;">
+          <td>4–7 months</td>
+          <td>Transition begins</td>
+          <td>Patches of adult curl appear; coat feels mixed-texture</td>
+          <td>Daily brushing — matting risk is highest here</td>
+        </tr>
+        <tr>
+          <td>7–12 months</td>
+          <td>Active change</td>
+          <td>Adult curl spreading from back toward legs; two-texture coat</td>
+          <td>First professional groom recommended around 9 months</td>
+        </tr>
+        <tr style="background:#f9fafb;">
+          <td>12–18 months</td>
+          <td>Near-complete adult coat</td>
+          <td>Dense, uniform curl; puppy fluff mostly gone</td>
+          <td>Regular 6–8 week groom schedule; coat now predictable</td>
+        </tr>
+        <tr>
+          <td>18+ months</td>
+          <td>Full adult coat</td>
+          <td>Dense double coat, consistent texture throughout</td>
+          <td>Maintenance grooming; coat is fully established</td>
+        </tr>
+      </tbody>
+    </table>
+
+
     <!-- Key facts & moral responsibility -->
     <section>
         <h2>Poodle puppy coat change timeline facts every responsible owner should know</h2>
@@ -156,6 +200,62 @@
     </section>
 
     <!-- interactive FAQ (accordion) + mandatory schemas already present -->
+
+    <section>
+      <h2>Coat Stage Calculator — Where Is Your Puppy Now?</h2>
+      <p>Enter your puppy's date of birth to find out which stage of the coat change they're in and what to focus on right now.</p>
+
+      <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:24px;margin:20px 0;">
+        <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end;">
+          <div>
+            <label for="poodle-dob" style="display:block;font-weight:600;margin-bottom:6px;color:#0f172a;">Puppy's date of birth</label>
+            <input type="date" id="poodle-dob" style="padding:10px 14px;border:1px solid #d1d5db;border-radius:8px;font-size:1rem;width:200px;">
+          </div>
+          <button onclick="calcCoatStage()" style="background:#365314;color:#fff;border:none;border-radius:8px;padding:11px 24px;font-size:1rem;font-weight:600;cursor:pointer;">Calculate</button>
+        </div>
+
+        <div id="coat-result" style="display:none;margin-top:20px;padding:16px;background:#fff;border-radius:8px;border-left:4px solid #365314;">
+          <p id="coat-age" style="margin:0 0 8px;color:#374151;"></p>
+          <p id="coat-stage" style="margin:0 0 8px;font-weight:700;color:#0f172a;font-size:1.1rem;"></p>
+          <p id="coat-advice" style="margin:0;color:#374151;"></p>
+        </div>
+      </div>
+
+      <script>
+      function calcCoatStage() {
+        var dob = document.getElementById('poodle-dob').value;
+        if (!dob) { alert('Please enter a date of birth.'); return; }
+        var birth = new Date(dob);
+        var now = new Date();
+        var months = (now.getFullYear() - birth.getFullYear()) * 12 + (now.getMonth() - birth.getMonth());
+        if (months < 0 || months > 36) { alert('Please enter a valid date between today and 3 years ago.'); return; }
+
+        var stage, advice;
+        if (months < 4) {
+          stage = 'Full puppy coat (0–4 months)';
+          advice = 'Your poodle still has their full soft puppy coat. Focus on gentle handling and introducing the brush as a positive experience — short 5-minute sessions with treats. No professional grooming needed yet.';
+        } else if (months < 7) {
+          stage = 'Transition beginning (4–7 months)';
+          advice = 'The adult curl is starting to emerge. This is when matting risk is highest. Brush daily, focusing on the ears, armpits, and collar area. Consider booking your first professional groomer visit.';
+        } else if (months < 12) {
+          stage = 'Active coat change (7–12 months)';
+          advice = 'Adult coat is spreading across the body. Your poodle likely has two different coat textures right now — that's completely normal. A professional groom around 9 months helps manage the transition without damaging the emerging adult curl.';
+        } else if (months < 18) {
+          stage = 'Near-complete adult coat (12–18 months)';
+          advice = 'Almost there. The puppy fluff is mostly gone and the adult coat is settling in. Establish a regular 6–8 week groom schedule now — consistency at this stage shapes the final coat texture.';
+        } else {
+          stage = 'Full adult coat (18+ months)';
+          advice = 'Your poodle's coat change is complete. The adult double coat is fully established. Maintain a consistent grooming routine and enjoy the predictability of a mature poodle coat.';
+        }
+
+        document.getElementById('coat-age').textContent = 'Age: ' + months + ' month' + (months !== 1 ? 's' : '');
+        document.getElementById('coat-stage').textContent = '📍 Stage: ' + stage;
+        document.getElementById('coat-advice').textContent = advice;
+        document.getElementById('coat-result').style.display = 'block';
+      }
+      </script>
+    </section>
+
     <section>
         <h2>Frequently asked questions about the poodle puppy coat change timeline</h2>
         <p>Below you’ll find honest answers rooted in veterinary science and ethical pet ownership.</p>
