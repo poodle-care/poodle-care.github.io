@@ -221,37 +221,37 @@
         </div>
       </div>
 
-      <script>
+            <script>
       function calcCoatStage() {
-        var dob = document.getElementById('poodle-dob').value;
-        if (!dob) { alert('Please enter a date of birth.'); return; }
+        var dob = document.getElementById("poodle-dob").value;
+        if (!dob) { alert("Please enter a date of birth."); return; }
         var birth = new Date(dob);
         var now = new Date();
         var months = (now.getFullYear() - birth.getFullYear()) * 12 + (now.getMonth() - birth.getMonth());
-        if (months < 0 || months > 36) { alert('Please enter a valid date between today and 3 years ago.'); return; }
+        if (months < 0 || months > 36) { alert("Please enter a valid date between today and 3 years ago."); return; }
 
         var stage, advice;
         if (months < 4) {
-          stage = 'Full puppy coat (0–4 months)';
-          advice = 'Your poodle still has their full soft puppy coat. Focus on gentle handling and introducing the brush as a positive experience — short 5-minute sessions with treats. No professional grooming needed yet.';
+          stage = "Full puppy coat (0-4 months)";
+          advice = "Your poodle still has their full soft puppy coat. Focus on gentle handling and introducing the brush as a positive experience — short 5-minute sessions with treats. No professional grooming needed yet.";
         } else if (months < 7) {
-          stage = 'Transition beginning (4–7 months)';
-          advice = 'The adult curl is starting to emerge. This is when matting risk is highest. Brush daily, focusing on the ears, armpits, and collar area. Consider booking your first professional groomer visit.';
+          stage = "Transition beginning (4-7 months)";
+          advice = "The adult curl is starting to emerge. This is when matting risk is highest. Brush daily, focusing on the ears, armpits, and collar area. Consider booking your first professional groomer visit.";
         } else if (months < 12) {
-          stage = 'Active coat change (7–12 months)';
-          advice = 'Adult coat is spreading across the body. Your poodle likely has two different coat textures right now — that's completely normal. A professional groom around 9 months helps manage the transition without damaging the emerging adult curl.';
+          stage = "Active coat change (7-12 months)";
+          advice = "Adult coat is spreading across the body. Your poodle likely has two different coat textures right now — completely normal. A professional groom around 9 months helps manage the transition without damaging the emerging adult curl.";
         } else if (months < 18) {
-          stage = 'Near-complete adult coat (12–18 months)';
-          advice = 'Almost there. The puppy fluff is mostly gone and the adult coat is settling in. Establish a regular 6–8 week groom schedule now — consistency at this stage shapes the final coat texture.';
+          stage = "Near-complete adult coat (12-18 months)";
+          advice = "Almost there. The puppy fluff is mostly gone and the adult coat is settling in. Establish a regular 6-8 week groom schedule now — consistency at this stage shapes the final coat texture.";
         } else {
-          stage = 'Full adult coat (18+ months)';
-          advice = 'Your poodle's coat change is complete. The adult double coat is fully established. Maintain a consistent grooming routine and enjoy the predictability of a mature poodle coat.';
+          stage = "Full adult coat (18+ months)";
+          advice = "The coat change is complete. The adult double coat is fully established. Maintain a consistent grooming routine and enjoy the predictability of a mature poodle coat.";
         }
 
-        document.getElementById('coat-age').textContent = 'Age: ' + months + ' month' + (months !== 1 ? 's' : '');
-        document.getElementById('coat-stage').textContent = '📍 Stage: ' + stage;
-        document.getElementById('coat-advice').textContent = advice;
-        document.getElementById('coat-result').style.display = 'block';
+        document.getElementById("coat-age").textContent = "Age: " + months + " month" + (months !== 1 ? "s" : "");
+        document.getElementById("coat-stage").textContent = "Stage: " + stage;
+        document.getElementById("coat-advice").textContent = advice;
+        document.getElementById("coat-result").style.display = "block";
       }
       </script>
     </section>
