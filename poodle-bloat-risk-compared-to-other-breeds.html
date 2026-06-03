@@ -123,7 +123,6 @@
 
 
 
-
 <h2>What is Bloat and GDV?</h2>
 <p>Bloat occurs when a dog’s stomach fills with gas, fluid, or food (dilatation). In cases of GDV, the distended stomach rotates on its axis (volvulus), trapping contents and cutting off blood supply to the stomach and spleen. This is a rapid, fatal condition without immediate veterinary intervention. The <a href="https://www.merckvetmanual.com/dog-owners/digestive-disorders-of-dogs/gastric-dilatation-and-volvulus-in-dogs" target="_blank">Merck Veterinary Manual</a> states that GDV progresses quickly and requires emergency surgery.</p>
 
@@ -320,3 +319,85 @@
 <details><summary>How do I find a veterinarian experienced with GDV?</summary>Look for a veterinary hospital with 24-hour emergency services and surgeons experienced in gastric dilatation-volvulus. The <a href="https://www.akc.org/expert-advice/health/" target="_blank">AKC Health</a> page can help locate specialists.</details>
 <details><summary>Is bloat more common in male or female Poodles?</summary>Some studies suggest a slightly higher risk in males, but the difference is not as significant as breed and anatomy. The <a href="https://pubmed.ncbi.nlm.nih.gov/?term=canine+epidemiology" target="_blank">canine epidemiology data</a> shows both sexes are affected.</details>
 
+</article>
+  <aside class="sidebar">
+    <section class="sidebar-panel sidebar-newsletter">
+      <h3>Get the next useful Poodle note</h3>
+      <p>One short email with new guides, daily-care reminders, and owner-first explainers.</p>
+      <input type="email" placeholder="Your email">
+      <button>Get the notes</button>
+    </section>
+    <section class="sidebar-panel"><h3>More Poodle Articles</h3><ul><li><a href="/standard-poodle-separation-anxiety-how-common.html">How Common Is Standard Poodle Separation Anxiety? Statistics and Risk Factors</a></li><li><a href="/how-much-exercise-does-a-standard-poodle-need.html">How much exercise does a Standard Poodle need</a></li><li><a href="/poodle-puppy-coat-change-timeline.html">Poodle Puppy Coat Change Timeline</a></li></ul></section>
+  </aside>
+</div>
+<footer class="footer">
+  <div class="footer-inner">
+    <span>&copy; 2026 Poodle Care. Practical breed notes for owners.</span>
+    <span><a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · <a href="/sitemap.html">Sitemap</a></span>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var _ga4 = "";
+  var _site = "poodle-care.github.io";
+  var _article = "poodle-bloat-risk-compared-to-other-breeds";
+  var _startTime = Date.now();
+  var _scrollMarks = {25: false, 50: false, 75: false, 100: false};
+
+  function _send(name, params) {
+    var data = Object.assign({page: _article, site: _site}, params);
+    if (_ga4 && typeof gtag === "function") {
+      gtag("event", name, data);
+    }
+    try {
+      var log = JSON.parse(localStorage.getItem("_ptrack") || "[]");
+      log.push({t: new Date().toISOString(), e: name, d: data});
+      if (log.length > 200) log = log.slice(-200);
+      localStorage.setItem("_ptrack", JSON.stringify(log));
+    } catch(e) {}
+  }
+
+  // Scroll depth
+  function _onScroll() {
+    var scrolled = window.scrollY + window.innerHeight;
+    var total = document.documentElement.scrollHeight;
+    var pct = Math.round((scrolled / total) * 100);
+    [25, 50, 75, 100].forEach(function(mark) {
+      if (!_scrollMarks[mark] && pct >= mark) {
+        _scrollMarks[mark] = true;
+        _send("scroll_depth", {depth: mark});
+      }
+    });
+  }
+  window.addEventListener("scroll", _onScroll, {passive: true});
+
+  // Time on page
+  function _sendTime() {
+    var secs = Math.round((Date.now() - _startTime) / 1000);
+    _send("time_on_page", {seconds: secs});
+  }
+  document.addEventListener("visibilitychange", function() {
+    if (document.hidden) _sendTime();
+  });
+  window.addEventListener("pagehide", _sendTime);
+
+  // Newsletter CTA
+  document.addEventListener("click", function(e) {
+    var btn = e.target.closest("button");
+    if (btn) {
+      var box = btn.closest(".sidebar-newsletter, [class*='newsletter']");
+      if (box) _send("newsletter_click", {label: btn.textContent.trim().slice(0, 40)});
+    }
+    var link = e.target.closest("a[href]");
+    if (link && !link.href.includes(window.location.hostname)) {
+      _send("outbound_click", {url: link.href.slice(0, 100)});
+    }
+  });
+
+  // Pageview
+  _send("article_view", {});
+})();
+</script>
+</body>
+</html>
