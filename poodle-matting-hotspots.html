@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poodle Matting Hotspots: Body Map by Clip Style | Poodle Guide</title>
+<meta name="description" content="Poodle matting hotspots by clip style: an interactive body map of where the coat knots first, plus how to line-comb ears, armpits, collar line and tail base.">
+    <meta name="author" content="Dog Breed Experts">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://poodle-care.github.io/poodle-matting-hotspots.html">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.75;
+            color: #2c2c2c;
+            background-color: #f9f9f9;
+        }
+
+        /* Email Bar Top */
+        .email-bar-top {
+            background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%);
+            padding: 12px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .email-bar-top-content {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex: 1;
+        }
+
+        .email-bar-form {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .email-bar-form input {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 13px;
+            width: 200px;
+        }
+
+        .email-bar-form button {
+            padding: 8px 16px;
+            background-color: #fbbf24;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #1e3a8a;
+            transition: background-color 0.3s;
+        }
+
+        .email-bar-form button:hover {
+            background-color: #f59e0b;
+        }
+
+        .email-bar-close {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 0;
+        }
+
+        /* Shimmer Bar */
+        .shimmer-bar {
+            height: 4px;
+            background: linear-gradient(90deg, #fbbf24 0%, #ec4899 50%, #3b82f6 100%);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -1000px 0; }
+            100% { background-position: 1000px 0; }
+        }
+
+        /* Header */
+        header {
+            background-color: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 48px;
+            z-index: 999;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1e3a8a;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #4b5563;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #3b82f6;
+        }
+
+        /* Main Container */
+        .main-wrapper {
+            max-width: 1120px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 40px;
+        }
+
+        .article {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #1e3a8a;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 26px;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            color: #1f2937;
+            border-left: 4px solid #3b82f6;
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: #374151;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #4b5563;
+        }
+
+        .intro-section {
+            background-color: #eff6ff;
+            padding: 20px;
+            border-left: 4px solid #3b82f6;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+
+        /* Sidebar Styles */
+        .post-sidebar {
+            position: sticky;
+            top: 120px;
+            height: fit-content;
+        }
+
+        .sidebar-widget {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 28px;
+            border: 1px solid #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sidebar-widget::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #c96a3a;
+        }
+
+        .sidebar-widget h3 {
+            margin-top: 0;
+            padding-left: 12px;
+            color: #1e293b;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .sidebar-widget p {
+            font-size: 14px;
+            color: #64748b;
+            margin: 12px 0;
+            padding-left: 12px;
+        }
+
+        .sidebar-widget a {
+            display: block;
+            padding: 8px 0 8px 12px;
+            color: #046bd2;
+            text-decoration: none;
+            font-size: 14px;
+            border-bottom: 1px solid #e2e8f0;
+            transition: all 0.2s;
+        }
+
+        .sidebar-widget a:hover {
+            color: #c96a3a;
+            border-bottom-color: #c96a3a;
+        }
+
+        .sidebar-widget a:last-child {
+            border-bottom: none;
+        }
+
+        .sidebar-email {
+            background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%);
+            padding: 28px;
+            margin: 32px 0;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sidebar-email::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .sidebar-email h3 {
+            color: white;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .sidebar-email p {
+            color: rgba(255,255,255,0.9);
+            margin: 0 0 15px;
+            font-size: 14px;
+        }
+
+        .sidebar-email form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .sidebar-email input {
+            padding: 10px 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .sidebar-email button {
+            background: white;
+            color: #046bd2;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        .sidebar-email small {
+            color: rgba(255,255,255,0.7);
+            font-size: 12px;
+        }
+
+        /* Email Widgets */
+        .email-widget {
+            background: white;
+            color: #1a1a1a;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+        }
+
+        .email-widget h3 {
+            color: #1a1a1a;
+            margin-bottom: 12px;
+        }
+
+        .email-widget p {
+            color: #404040;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .email-widget input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .email-widget button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3b82f6;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .email-widget button:hover {
+            background-color: #2563eb;
+        }
+
+        .email-widget-article {
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        th {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        tr:hover {
+            background-color: #f3f4f6;
+        }
+
+        /* FAQ */
+        .faq-section {
+            margin-top: 40px;
+        }
+
+        details {
+            background-color: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 16px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #1e3a8a;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+
+        summary:hover {
+            background-color: #f0f4f8;
+        }
+
+        details[open] summary {
+            background-color: #eff6ff;
+        }
+
+        details > div {
+            padding: 0 16px 16px 16px;
+            color: #4b5563;
+            font-size: 15px;
+        }
+
+        /* Internal Links Styling */
+        a {
+            color: #3b82f6;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #1e40af;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e293b;
+            color: white;
+            padding: 40px 0;
+            margin-top: 80px;
+        }
+
+        footer .footer-content {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        footer h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: #cbd5e1;
+        }
+
+        footer a {
+            color: #cbd5e1;
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        footer .footer-bottom {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 20px 24px;
+            border-top: 1px solid #334155;
+            text-align: center;
+            color: #cbd5e1;
+        }
+
+        footer .footer-bottom a {
+            display: inline;
+            margin: 0 5px;
+        }
+
+        /* Email Bar Bottom */
+        .email-bar {
+            background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%);
+            color: white;
+            padding: 12px 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            font-size: 14px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .email-bar-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            justify-content: center;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .email-bar-text {
+            flex: 1;
+            text-align: center;
+            color: white;
+        }
+
+        .email-bar-form {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .email-bar-form input {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            min-width: 200px;
+            font-size: 13px;
+            color: #333;
+        }
+
+        .email-bar-form button {
+            background: white;
+            color: #046bd2;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        .email-bar-form button:hover {
+            opacity: 0.9;
+        }
+
+        .email-bar.bottom {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: auto;
+            z-index: 99;
+        }
+
+        .email-bar.bottom .email-bar-content {
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            nav {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .email-bar-top {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .email-bar-form {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .email-bar-form input {
+                width: 100%;
+            }
+
+            .article {
+                padding: 20px;
+            }
+        }
+
+        /* Highlight */
+        .highlight {
+            background-color: #fef3c7;
+            padding: 2px 6px;
+            border-radius: 2px;
+        }
+    
+  /* Internal article links - blue */
+  a[href^="/"] {
+    color: #0066cc;
+    font-weight: 500;
+  }
+  a[href^="/"]:visited {
+    color: #0052a3;
+  }
+  a[href^="/"]:hover {
+    color: #0052a3;
+    text-decoration: underline;
+  }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "Where Poodles Mat First: A Body Map of Matting Hotspots by Clip Style and How to Comb Each One",
+ "description": "Poodle matting hotspots by clip style: an interactive body map of where the coat knots first, plus how to line-comb ears, armpits, collar line and tail base.",
+ "datePublished": "2026-10-20",
+ "dateModified": "2026-10-20",
+ "author": {
+  "@type": "Person",
+  "name": "Claire Dubois"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Poodle Guide",
+  "url": "https://poodle-care.github.io/"
+ },
+ "mainEntityOfPage": "https://poodle-care.github.io/poodle-matting-hotspots.html",
+ "inLanguage": "en"
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Where do Poodles get matted the most?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Behind the ears, in the armpits, along the collar and harness lines, in the groin and inner thighs, at the tail base and on the back of the rear legs. These are the zones where the coat rubs against itself or against gear."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do I need to brush my Poodle every day?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Not always. Most pet Poodles in a short or medium clip do well with a daily check of the ears and collar line, hotspot line-combing every few days, and a full brush-out around bath day. Long coats and puppies in coat change need more."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Why does my Poodle mat behind the ears even when I brush?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The hair behind the ears is often finer and softer than the rest of the coat, and the ear moves against it constantly. A slicker can skim over it, so finish with the fine teeth of a metal comb and check down to the skin."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Which clip is easiest to keep mat-free?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A short all-over pet clip, because almost nothing is long enough to knot except the ears, topknot and tail. A lamb clip with shorter legs is a middle ground."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do harnesses cause matting in Poodles?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "They add friction behind the elbows, in the armpits and around the chest. Take the harness off at home and check the strap line every few days."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Should I bathe my Poodle to get mats out?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. Water tightens tangles into tighter mats. Brush and comb the coat out first, then bathe, then dry and comb it completely."
+   }
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "VideoObject",
+ "name": "Brushing a Poodle (Doodle or Poo!) - The Right Way to Brush your Poodle or Poodle-Mix",
+ "description": "Gina's Grooming walks through a full brushing session on a white Standard Poodle: types of brushes, combs, conditioning spray and working around the dog's anatomy.",
+ "thumbnailUrl": "https://i.ytimg.com/vi/ZAwCUI3jOuQ/hqdefault.jpg",
+ "uploadDate": "2022-05-24",
+ "embedUrl": "https://www.youtube-nocookie.com/embed/ZAwCUI3jOuQ"
+}
+</script>
+<style id="article-links">article a{color:#0066cc}article a:visited{color:#0052a3}article a:hover{color:#0052a3;text-decoration:underline}</style>
+<style id="site-chrome">
+:where(body){margin:0}.sc-reset,header.sc-topbar,footer.sc-footer{box-sizing:border-box}
+[class*="wrap"],[class*="inner"],[class*="layout"],[class*="container"]{box-sizing:border-box}
+/* ── Top bar ── */
+  .sc-topbar{
+    background: #134e4a;
+    color: #fff;
+    padding: 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  }
+.sc-topbar-inner{
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 54px;
+  }
+.sc-topbar-brand{
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.01em;
+  }
+.sc-topbar-nav{
+    display: flex;
+    gap: 4px;
+    list-style: none;
+  }
+.sc-topbar-nav a{
+    color: rgba(255,255,255,0.88);
+    font-size: 0.88rem;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background 0.15s;
+  }
+.sc-topbar-nav a:hover{
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    text-decoration: none;
+  }
+@media(max-width:600px) {
+    .sc-topbar-nav { display: none; }}
+/* ── Footer ── */
+  .sc-footer{
+    background: #0f3e3b;
+    color: rgba(255,255,255,0.75);
+    text-align: center;
+    padding: 24px 16px;
+    font-size: 0.82rem;
+    margin-top: 40px;
+  }
+.sc-footer-nav{ margin-bottom: 8px; }
+.sc-footer-nav a{
+    color: rgba(255,255,255,0.85);
+    margin: 0 10px;
+    font-size: 0.85rem;
+  }
+.sc-topbar a,.sc-footer a{text-decoration:none}
+/* links blue: the most recognisable clickable colour (owner 2026-10-13); not the bar, footer, buttons or cards */
+a:not(.sc-topbar *):not(.sc-footer *):not(header *):not(footer *):not([class*="button"]):not([class*="btn"]):not([class*="-card"]):not([class*="badge"]):not(.sidebar-link):not(.sc-topbar-brand):not([style*="background"]){color:#0066cc!important}a:not(.sc-topbar *):not(.sc-footer *):not(header *):not(footer *):not([class*="button"]):not([class*="btn"]):not([class*="-card"]):not([class*="badge"]):not(.sidebar-link):not(.sc-topbar-brand):not([style*="background"]):visited{color:#0052a3!important}a:not(.sc-topbar *):not(.sc-footer *):not(header *):not(footer *):not([class*="button"]):not([class*="btn"]):not([class*="-card"]):not([class*="badge"]):not(.sidebar-link):not(.sc-topbar-brand):not([style*="background"]):hover{text-decoration:underline}
+/* site name always readable on the bar, whatever the article CSS does with links (owner 2026-10-13) */
+.sc-topbar .sc-topbar-brand,.sc-topbar .sc-topbar-brand:visited,.sc-topbar .sc-topbar-brand:hover{color:#fff!important}
+@media(max-width:700px){header[class^="sc-"] [class*="inner"],header[class^="sc-"]{flex-wrap:wrap;height:auto}header[class^="sc-"] nav,header[class^="sc-"] [class*="nav"]{display:flex;flex-wrap:wrap;gap:6px 14px}header[class^="sc-"] [class*="inner"]{padding-top:8px;padding-bottom:8px}main,article,aside,[class*="wrap"]>*,[class*="layout"]>*,[class*="content"],[class*="column"]{min-width:0!important;max-width:100%}table{display:block!important;width:auto!important;max-width:100%!important;overflow-x:auto}img,iframe,video{max-width:100%;height:auto}h1,h2,h3,p,li{overflow-wrap:anywhere}[class*="wrap"],[class*="layout"],[class*="rich"],[class*="content"]{grid-template-columns:minmax(0,1fr)!important}article *,[class*="content"] *,[class*="rich"] *{box-sizing:border-box!important;max-width:100%!important;min-width:0!important}table{overflow-x:auto!important}}
+</style>
+<style id="sc-font">body{font-family:Georgia, serif}body h1,body h2,body h3{font-family:Georgia, serif}</style>
+<style id="sc-sidebar">@media (max-width: 700px) {
+    .sb-sidebar { display: none; }}
+/* ── Sidebar ── */
+  .sb-sidebar{ position: sticky; top: 70px; }
+.sidebar-widget{
+    background: #134e4a;
+    border-radius: 10px;
+    padding: 22px 18px;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.13);
+    margin-bottom: 20px;
+  }
+.sidebar-widget h3{ font-size: 1rem; margin-bottom: 8px; font-weight: 700; }
+.sidebar-widget p{ font-size: 0.86rem; margin-bottom: 12px; opacity: 0.9; }
+.sidebar-widget input[type="email"]{
+    width: 100%; padding: 9px 11px; border: none; border-radius: 5px;
+    font-size: 0.88rem; margin-bottom: 8px; outline: none;
+  }
+.sidebar-widget button{
+    width: 100%; padding: 10px; background: #fff; color: #134e4a;
+    border: none; border-radius: 5px; font-weight: 700; font-size: 0.88rem;
+    cursor: pointer;
+  }
+.sidebar-widget .disclaimer{
+    font-size: 0.7rem; opacity: 0.65; margin-top: 8px; text-align: center;
+  }
+.sb-sidebar-about{
+    background: #fff; border-radius: 8px; padding: 18px 16px;
+    font-size: 0.88rem; color: #444; line-height: 1.6;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    margin-bottom: 20px;
+  }
+.sb-sidebar-about strong{ color: #0f3e3b; display: block; margin-bottom: 6px; font-size: 0.95rem; }
+.sb-sidebar-links{
+    background: #fff; border-radius: 8px; padding: 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  }
+.sb-sidebar-links h4{ font-size: 0.9rem; color: #0f3e3b; margin-bottom: 10px; }
+.sb-sidebar-links ul{ list-style: none; }
+.sb-sidebar-links li{ padding: 4px 0; border-bottom: 1px solid #f0f0f0; font-size: 0.86rem; }
+.sb-sidebar-links li:last-child{ border: none; }
+.sb-sidebar-links a{ color: #134e4a; }</style>
+</head>
+<body>
+<header class="sc-topbar">
+  <div class="sc-topbar-inner">
+    <a class="sc-topbar-brand" href="/">Poodle Guide</a>
+    <nav>
+      <ul class="sc-topbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/care.html">Care</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/sitemap.html">Sitemap</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+
+
+<div class="main-wrapper">
+<main class="article">
+<article class="article">
+<nav class="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>›</span><a href="/blog.html">Blog</a><span>›</span><span aria-current="page">Poodle Matting Hotspots</span></nav>
+<h1>Where Poodles Mat First: A Body Map of Matting Hotspots by Clip Style and How to Comb Each One</h1>
+
+    <p class="meta">Published: 2026-10-20 · Poodle Care</p>
+
+    <p>Poodle matting hotspots are the handful of places where the coat knots long before the rest of the dog looks messy: behind the ears, in the armpits, under the collar, at the tail base and down the back of the hind legs. If you have been brushing every evening and still finding felted lumps at the groomer, you are probably not lazy or doing it wrong. You are spending your energy evenly on a coat that does not mat evenly.</p>
+
+<div class="tldr" style="border-left:4px solid #134e4a;background:#f0f7f6;padding:14px 18px;margin:22px 0;border-radius:6px">
+<p><strong>Quick answer:</strong> Poodles mat first where the body rubs against itself or against gear: behind the ears, armpits, collar and harness lines, groin and inner thighs, tail base, the back of the rear legs and between the toes. Your clip decides which of those spots stay long enough to knot. Instead of brushing the whole dog every day, line-comb the four or five hotspots that match your clip, check them with a metal comb down to the skin, and save the full brush-out for bath day.</p>
+</div>
+
+<p>Pick your Poodle's clip and habits below. The map lights up the zones most likely to mat for that combination and tells you how to comb each one and how often to check it.</p>
+
+<div id="mat-map" style="border:2px solid #134e4a;border-radius:10px;padding:20px;margin:24px 0;background:#fff">
+<p style="margin-top:0;color:#134e4a;font-size:1.25rem;font-weight:700">Poodle Mat Hotspot Map</p>
+<p style="font-size:0.92rem;color:#555">A planning aid built from the friction zones and owner reports cited in this guide, not a measurement. Tap a numbered spot or a zone in the list for its combing method.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:12px 0">
+<label>Clip style<br><select id="mm-clip" style="width:100%;padding:6px">
+<option value="short">Short all-over pet clip (under 1/2 inch)</option>
+<option value="lamb">Lamb clip: short body, fuller legs</option>
+<option value="teddy" selected>Teddy / puppy clip: even, medium length</option>
+<option value="show">Continental or long show-style coat</option>
+</select></label>
+<label>Ears<br><select id="mm-ears" style="width:100%;padding:6px">
+<option value="0">Ears clipped short</option>
+<option value="1" selected>Long, fluffy ear feathering</option>
+</select></label>
+<label>Gear worn most days<br><select id="mm-gear" style="width:100%;padding:6px">
+<option value="none">Nothing / collar off at home</option>
+<option value="collar" selected>Collar</option>
+<option value="harness">Harness</option>
+<option value="coat">Coat or sweater</option>
+</select></label>
+<label>Coat gets wet<br><select id="mm-wet" style="width:100%;padding:6px">
+<option value="0" selected>Rarely</option>
+<option value="1">Weekly (swims, rain, snow)</option>
+</select></label>
+<label>Coat stage<br><select id="mm-stage" style="width:100%;padding:6px">
+<option value="0" selected>Adult coat</option>
+<option value="1">Puppy coat changing to adult</option>
+</select></label>
+</div>
+<svg viewBox="0 0 420 250" role="group" aria-label="Side view of a Poodle with matting hotspots" style="width:100%;max-width:520px;display:block;margin:10px auto;background:#f7faf9;border-radius:8px">
+<ellipse cx="205" cy="125" rx="105" ry="48" fill="#d8e6e4"/>
+<ellipse cx="330" cy="70" rx="38" ry="34" fill="#d8e6e4"/>
+<ellipse cx="368" cy="82" rx="26" ry="14" fill="#d8e6e4"/>
+<ellipse cx="315" cy="98" rx="14" ry="30" fill="#c3d8d5"/>
+<rect x="282" y="85" width="40" height="55" rx="18" fill="#d8e6e4"/>
+<rect x="125" y="150" width="24" height="80" rx="10" fill="#d8e6e4"/>
+<rect x="265" y="150" width="24" height="80" rx="10" fill="#d8e6e4"/>
+<path d="M102 110 Q70 70 78 46" stroke="#d8e6e4" stroke-width="12" fill="none" stroke-linecap="round"/>
+<circle cx="80" cy="44" r="14" fill="#d8e6e4"/>
+<g id="mm-dots"></g>
+</svg>
+<div id="mm-out" aria-live="polite"></div>
+</div>
+<script>
+(function(){
+  var Z=[
+    {k:'ear',n:'Behind the ears and ear feathering',x:318,y:100,how:'Hold the ear leather flat in your palm. Line-comb the feathering from the edge in, then lift the ear and comb the soft hair behind it in short strokes with the fine end of the comb.'},
+    {k:'collar',n:'Collar line and neck',x:290,y:92,how:'Take the collar off first. Part the neck coat in rings around the neck and brush each ring away from the skin, then comb the whole ring.'},
+    {k:'arm',n:'Armpits and elbows',x:282,y:148,how:'Lift the front leg forward in a natural position, not out to the side. Use small flicks of the slicker into the armpit, then work the comb through from the skin.'},
+    {k:'chest',n:'Chest and front of the shoulders',x:308,y:128,how:'With the dog sitting, part horizontal lines from the bottom of the chest upward and comb each line before parting the next.'},
+    {k:'belly',n:'Belly and harness strap line',x:205,y:170,how:'Stand the dog up or lay them on their side. Brush in short lines along the strap path, then check under the girth with the comb.'},
+    {k:'groin',n:'Groin and inner thighs',x:150,y:160,how:'Keep the dog standing and lift the rear leg only slightly. Use the narrow edge of the slicker and finish with the fine teeth of the comb.'},
+    {k:'rear',n:'Back of the rear legs',x:125,y:185,how:'Start at the hock and work upward in half-inch lines, so you are never pushing tangles down into hair you have not cleared.'},
+    {k:'tail',n:'Tail base and pompon',x:100,y:110,how:'Hold the tail up and part the hair in a circle around the base. Comb the pompon from the tip toward the base in small sections.'},
+    {k:'feet',n:'Feet and between the toes',x:277,y:226,how:'Spread the toes and comb the hair between them, or keep the feet clipped short so there is nothing to knot.'},
+    {k:'flank',n:'Flank the dog sleeps on',x:205,y:110,how:'Check the side your Poodle lies on most. Part from the belly line upward and comb each line before moving up.'},
+    {k:'top',n:'Topknot',x:332,y:46,how:'Brush the topknot in layers from the bottom up and comb it out before banding it.'}
+  ];
+  var base={
+    short:{ear:2,collar:1,arm:1,chest:0,belly:0,groin:1,rear:0,tail:1,feet:0,flank:0,top:1},
+    lamb:{ear:2,collar:1,arm:2,chest:1,belly:1,groin:2,rear:2,tail:2,feet:1,flank:0,top:1},
+    teddy:{ear:2,collar:2,arm:2,chest:2,belly:1,groin:2,rear:2,tail:2,feet:1,flank:1,top:1},
+    show:{ear:3,collar:3,arm:3,chest:3,belly:1,groin:2,rear:2,tail:2,feet:1,flank:2,top:2}
+  };
+  function v(id){return document.getElementById(id).value;}
+  function run(){
+    var r=JSON.parse(JSON.stringify(base[v('mm-clip')]));
+    var ears=v('mm-ears')==='1',gear=v('mm-gear'),wet=v('mm-wet')==='1',stage=v('mm-stage')==='1';
+    if(!ears){r.ear=Math.max(1,r.ear-1);}else{r.ear+=1;}
+    if(gear==='collar'){r.collar+=2;}
+    if(gear==='harness'){r.arm+=2;r.belly+=2;}
+    if(gear==='coat'){r.arm+=2;r.collar+=1;r.belly+=1;r.flank+=1;}
+    if(wet){r.feet+=1;r.rear+=1;r.belly+=1;r.arm+=1;}
+    if(stage){for(var k in r){if(r[k]>0){r[k]+=1;}}}
+    var list=Z.map(function(z){return {z:z,s:r[z.k]};}).filter(function(o){return o.s>0;});
+    list.sort(function(a,b){return b.s-a.s;});
+    var g=document.getElementById('mm-dots');
+    while(g.firstChild){g.removeChild(g.firstChild);}
+    var out=document.getElementById('mm-out');
+    while(out.firstChild){out.removeChild(out.firstChild);}
+    var h=document.createElement('p');
+    h.style.fontWeight='700';
+    h.textContent='Your top hotspots, most likely to mat first:';
+    out.appendChild(h);
+    var detail=document.createElement('div');
+    detail.style.cssText='background:#f0f7f6;border-radius:6px;padding:10px 14px;margin:10px 0;font-size:0.93rem';
+    function show(o,i){
+      var freq=o.s>=4?'every day, 2-3 minutes':(o.s>=2?'every 2-3 days':'once a week, and on bath day');
+      detail.textContent=(i+1)+'. '+o.z.n+' - check '+freq+'. '+o.z.how;
+    }
+    var ol=document.createElement('ol');
+    list.forEach(function(o,i){
+      var col=o.s>=4?'#b91c1c':(o.s>=2?'#b45309':'#15803d');
+      var ns='http://www.w3.org/2000/svg';
+      var c=document.createElementNS(ns,'circle');
+      c.setAttribute('cx',o.z.x);c.setAttribute('cy',o.z.y);c.setAttribute('r',o.s>=4?11:(o.s>=2?9:7));
+      c.setAttribute('fill',col);c.setAttribute('fill-opacity','0.85');c.setAttribute('tabindex','0');
+      c.setAttribute('role','button');c.setAttribute('aria-label',o.z.n);c.style.cursor='pointer';
+      var t=document.createElementNS(ns,'text');
+      t.setAttribute('x',o.z.x);t.setAttribute('y',o.z.y+4);t.setAttribute('text-anchor','middle');
+      t.setAttribute('font-size','10');t.setAttribute('fill','#fff');t.setAttribute('pointer-events','none');
+      t.textContent=String(i+1);
+      c.addEventListener('click',function(){show(o,i);});
+      c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();show(o,i);}});
+      g.appendChild(c);g.appendChild(t);
+      var li=document.createElement('li');
+      var b=document.createElement('button');
+      b.type='button';
+      b.style.cssText='background:none;border:0;padding:2px 0;cursor:pointer;text-align:left;font:inherit;color:'+col;
+      b.textContent=o.z.n+(o.s>=4?' (high)':(o.s>=2?' (medium)':' (low)'));
+      b.addEventListener('click',function(){show(o,i);});
+      li.appendChild(b);ol.appendChild(li);
+    });
+    out.appendChild(ol);
+    out.appendChild(detail);
+    if(list.length){show(list[0],0);}
+  }
+  ['mm-clip','mm-ears','mm-gear','mm-wet','mm-stage'].forEach(function(id){document.getElementById(id).addEventListener('change',run);});
+  run();
+})();
+</script>
+
+<p>The point of the map is to give you permission to stop brushing everything, every day. Most pet Poodles do not need a nightly full-body session. They need a few minutes on the right few square inches, done properly to the skin, and a real brush-out before or after the bath.</p>
+
+<p>If you have never seen line brushing done on a Poodle, the film below is worth ten minutes. Groomer Gina works through a full brushing session on Ava, a white Standard Poodle, covering which brushes and combs to use, why a conditioning spray matters, and how to move around the dog's anatomy so no area gets skipped.</p>
+
+<div style="position:relative;width:100%;aspect-ratio:16/9"><iframe src="https://www.youtube-nocookie.com/embed/ZAwCUI3jOuQ" loading="lazy" title="Brushing a Poodle the right way (Gina's Grooming)" style="position:absolute;inset:0;width:100%;height:100%;border:0" allowfullscreen></iframe></div>
+
+<h2>Where do Poodles mat first?</h2>
+<p><strong>Poodles mat first in the friction zones:</strong> behind the ears, under the chin, in the armpits, along the collar and harness lines, on the feet and on the back of the rear legs. Those are the spots <a href="https://www.preventivevet.com/dogs/why-your-dogs-coat-gets-matted-what-to-do-about-mats" rel="noopener" target="_blank">Preventive Vet lists as the places where mats form most often</a>, and the same article names Poodles among the curly-coated breeds that mat easily.</p>
+
+<h3>Movement zones and contact zones</h3>
+<p>One of the most useful ways to think about it comes from an owner in the r/poodles thread <a href="https://www.reddit.com/r/poodles/comments/1twmgcf/which_areas_get_matted_easiest/" rel="noopener" target="_blank">"Which areas get matted easiest?"</a>: look for movement zones, where the body rubs against itself, and contact zones, where a collar, a bed or the ground rubs against the body. Other owners in the same thread named behind the ears, the armpits, the inner thighs and groin, the collar or harness line, the tail base and the flank the dog lies on.</p>
+<ul>
+<li><strong>Movement zones:</strong> armpits, elbows, groin, inner thighs and the back of the rear legs. Every step rubs these surfaces together.</li>
+<li><strong>Contact zones:</strong> the collar ring, harness straps, the chest and belly under a coat, the side your dog sleeps on, and the feet.</li>
+<li><strong>Soft-hair zones:</strong> behind the ears and around the tail base. Several owners describe this hair as finer and softer than the rest of the coat, which is why it knots first even on a well-kept dog.</li>
+</ul>
+
+<h3>Why the curl makes it worse</h3>
+<p>A Poodle's coat is thick, curly and harsh, and the tight curl slows the loss of dead hair by trapping it in the curls, according to the <a href="https://en.wikipedia.org/wiki/Poodle" rel="noopener" target="_blank">Wikipedia entry on the Poodle</a>. That is the trade-off of a low-shedding dog: the hair that would have landed on your floor stays in the coat, and in a friction zone it twists around the living hair until it felts into a mat.</p>
+
+<h2>How does clip style change the hotspot map?</h2>
+<p><strong>Your clip decides which hotspots stay long enough to knot.</strong> Anything clipped under about half an inch rarely mats, so a short pet clip leaves only the ears, topknot and tail. A teddy or show-style coat keeps every friction zone long and needs the full map.</p>
+
+<h3>Clip-by-clip comparison</h3>
+<table style="width:100%;border-collapse:collapse;margin:16px 0;font-size:0.93rem">
+<thead><tr style="background:#134e4a;color:#fff"><th style="padding:8px;text-align:left">Clip style</th><th style="padding:8px;text-align:left">What stays long</th><th style="padding:8px;text-align:left">Hotspots to check first</th><th style="padding:8px;text-align:left">Realistic check rhythm</th></tr></thead>
+<tbody>
+<tr><td style="padding:8px;border-bottom:1px solid #ddd">Short all-over pet clip</td><td style="padding:8px;border-bottom:1px solid #ddd">Topknot, ears, tail pompon</td><td style="padding:8px;border-bottom:1px solid #ddd">Behind the ears, tail base</td><td style="padding:8px;border-bottom:1px solid #ddd">Ears 2-3 times a week, the rest on bath day</td></tr>
+<tr><td style="padding:8px;border-bottom:1px solid #ddd">Lamb clip (short body, fuller legs)</td><td style="padding:8px;border-bottom:1px solid #ddd">Legs, ears, topknot, tail</td><td style="padding:8px;border-bottom:1px solid #ddd">Armpits, groin, back of rear legs, ears</td><td style="padding:8px;border-bottom:1px solid #ddd">Legs and armpits every 2-3 days</td></tr>
+<tr><td style="padding:8px;border-bottom:1px solid #ddd">Teddy or puppy clip (even, medium)</td><td style="padding:8px;border-bottom:1px solid #ddd">Everything at one length</td><td style="padding:8px;border-bottom:1px solid #ddd">Ears, collar, armpits, chest, groin, tail base</td><td style="padding:8px;border-bottom:1px solid #ddd">Two or three hotspots a day in rotation</td></tr>
+<tr><td style="padding:8px;border-bottom:1px solid #ddd">Continental or long show coat</td><td style="padding:8px;border-bottom:1px solid #ddd">Mane, chest, ears, topknot, bracelets, pompon</td><td style="padding:8px;border-bottom:1px solid #ddd">Ears, mane underside, armpits, collar line</td><td style="padding:8px;border-bottom:1px solid #ddd">Daily hotspot checks plus a weekly full line-brush</td></tr>
+</tbody>
+</table>
+
+<h3>The show clip was designed around the body</h3>
+<p>The Continental clip shaves the face and rear end of the body and leaves tufts on the hocks and the tip of the tail, a style once used so water would not weigh a retrieving dog down while still leaving its joints and vital organs covered (<a href="https://en.wikipedia.org/wiki/Poodle" rel="noopener" target="_blank">Wikipedia</a>). For a pet owner the lesson is practical: you can take length off the zones that mat and keep length where you like the look. A Reddit owner who keeps their Poodle's legs short reported that behind the ears is now the only real trouble spot.</p>
+
+<h3>Ears are the hotspot that every clip keeps</h3>
+<p>Almost every pet clip leaves some ear feathering, and the hair just behind the ear is the softest on the dog. If you are short on time, this is the one zone not to skip.</p>
+
+<h2>What is line combing, and why does surface brushing fail?</h2>
+<p><strong>Line combing means parting the coat into thin horizontal lines and brushing and combing each line from the skin outward.</strong> Brushing only the top layer leaves the knots underneath and, as <a href="https://www.preventivevet.com/dogs/why-your-dogs-coat-gets-matted-what-to-do-about-mats" rel="noopener" target="_blank">Preventive Vet warns</a>, combing just the top layer is one of the most common mistakes and can make matting worse.</p>
+
+<h3>The basic method</h3>
+<p>The UK salon <a href="https://thepetretreat.co.uk/blog/wool-coat-grooming-guide/" rel="noopener" target="_blank">The Pet Retreat describes how its groomers line-brush wool coats</a>: start at the feet, work up the legs and then the body, brushing from the skin to the end of the hair, and finish with a fine-tooth comb to catch small knots. Their guide also says a wool coat needs daily grooming and a salon visit about every six weeks, which fits the four- to eight-week grooming interval that Wikipedia gives for pet Poodles.</p>
+<ol>
+<li>Hold the coat above your working line up and out of the way with your flat hand.</li>
+<li>Brush the strip below your hand from the skin outward with a slicker, keeping the brush flat and letting it do the work.</li>
+<li>Run a wide-toothed metal comb through the same strip from the skin. If it snags, brush that spot again.</li>
+<li>Repeat with the fine teeth of the comb. A smooth glide means the strip is done.</li>
+<li>Move your part up about half an inch and repeat.</li>
+</ol>
+
+<h3>The comb is the test, not the brush</h3>
+<p>A slicker can glide over a coat that is felted at the base. The metal comb is what tells you the truth. If it cannot reach the skin and slide out to the tip, that line is not finished, however fluffy the outside looks.</p>
+
+<h2>How to comb each hotspot</h2>
+<p>Each zone has its own trick, mostly about how you hold the dog. Several groomers in the r/poodles threads stress the same two habits: use a detangling or conditioning spray rather than brushing a dry coat, and keep each session short. One groomer suggested no more than 30 minutes at a time so the dog does not start to hate it.</p>
+
+<h3>Behind the ears</h3>
+<p>Hold the ear leather flat in your palm so the brush pressure lands on your hand, not on the thin ear. Line-comb the feathering from the outer edge inward, then lift the ear and work the short, soft hair behind it with the fine end of the comb. Be gentle here: the skin is thin and this is the area dogs most often pull away from.</p>
+
+<h3>Armpits and elbows</h3>
+<p>Lift the front leg forward, keeping the joint in a natural position rather than pulling it out sideways. An experienced owner in the r/poodles thread uses small wrist flicks of the slicker into the armpit, then follows with the comb. Harness wearers need this zone checked most often, because the strap sits right behind the elbow.</p>
+
+<h3>Collar line and neck</h3>
+<p>Take the collar off before you start. Part the neck coat in rings, brush each ring away from the skin and comb it before moving up. If your Poodle wears a collar all day, consider a flat, smooth one, or leave it off at home.</p>
+
+<h3>Groin, inner thighs and the back of the rear legs</h3>
+<p>Keep the dog standing and lift each rear leg only slightly. Start at the hock and work upward, so you are never pushing a tangle down into hair you have not cleared yet. Use the narrow edge of the slicker in the groin and the fine teeth of the comb to check.</p>
+
+<h3>Tail base and pompon</h3>
+<p>Hold the tail up and part the hair in a ring around the base. The tail base often hides the biggest surprise mat, because it is easy to forget and the hair there is soft. One r/poodles owner posted about a mat the size of a golf or tennis ball in their dog's tail.</p>
+
+<h3>Feet, chest and the sleeping flank</h3>
+<p>Spread the toes and comb between them, or keep the feet clipped short so nothing can knot. Work the chest in horizontal lines from the bottom up while the dog sits. Check the side your Poodle sleeps on: owners regularly report flank mats on the side that gets the most bed contact.</p>
+
+<h2>Is daily brushing really necessary?</h2>
+<p><strong>For most pet Poodles with a short or medium clip, no.</strong> A daily look at the hotspots plus a thorough brush-out around bath day keeps most coats clear. Daily full brushing matters most for long coats, puppies in coat change and dogs that get wet often.</p>
+
+<h3>What groomers on Reddit actually said</h3>
+<p>In an r/poodles discussion titled "Not good to brush every day?", a groomer explained that they only brush their own dog after a bath, but he is bathed and blow-dried every one to two weeks. Owners who do not keep that schedule, they said, should brush often with a good detangling spray. Another commenter pointed out that show owners avoid daily brushing because they are protecting 6 to 12 inches of hair, which is a different job from keeping a pet clip tidy.</p>
+
+<h3>Permission to do less, better</h3>
+<p>If brushing has become a nightly fight that leaves both of you tired, change the plan rather than trying harder. Ten focused minutes on four hotspots does more than forty minutes skimming the whole coat. Rotate the zones across the week, stop before your Poodle gets restless, and let the groomer appointment do the heavy work. Choosing a shorter clip during a busy season is not giving up. It is a reasonable decision that removes several hotspots from the map at once.</p>
+
+<h2>When does a Poodle mat faster than usual?</h2>
+<p><strong>Mats build fastest during coat change, after the coat gets wet, and under clothing or gear.</strong> In those weeks, move every hotspot up one level on the map and check more often until things settle down.</p>
+
+<h3>Coat change</h3>
+<p>The original poster of the "Which areas get matted easiest?" thread underestimated how different puppy hair is from adult hair, and found mats behind the ears and in the armpits after not increasing brushing during the change. If your dog is in the middle of the <a href="/poodle-puppy-coat-change-timeline.html">puppy-to-adult coat change</a>, this is the period to brush more, not less.</p>
+
+<h3>Wet coats and baths</h3>
+<p>Moisture makes the hair curl and dry tangled, so swimming dogs mat more easily, and many dogs that are bathed but not thoroughly brushed and dried develop mats (<a href="https://www.preventivevet.com/dogs/why-your-dogs-coat-gets-matted-what-to-do-about-mats" rel="noopener" target="_blank">Preventive Vet</a>). Winter adds its own version: clumps of snow freezing in the leg and belly coat, which we cover in our guide to <a href="/poodle-snowballs-winter-coat.html">Poodle snowballs and winter clip length</a>. A dry, line-combed coat is the goal after every soaking.</p>
+
+<h3>Busy, active weeks</h3>
+<p>An active Standard Poodle getting the <a href="/how-much-exercise-does-a-standard-poodle-need.html">daily exercise the breed needs</a> runs, rolls and wears a harness more often, so the movement zones get extra friction. Add a quick armpit and groin check after long off-leash days.</p>
+
+<h2>A weekly hotspot routine you can keep up</h2>
+<p>This is a starting point for a teddy or lamb clip. Adjust it with the map above.</p>
+<ul>
+<li><strong>Every day, about 3 minutes:</strong> run the comb behind both ears and through the collar line. Take the collar or harness off while you do it.</li>
+<li><strong>Monday and Thursday:</strong> armpits, elbows and chest, line-combed with spray.</li>
+<li><strong>Tuesday and Friday:</strong> groin, inner thighs and the back of the rear legs, working from hock to hip.</li>
+<li><strong>Wednesday and Saturday:</strong> tail base, pompon, feet and the flank your dog sleeps on.</li>
+<li><strong>Bath day:</strong> full line-brush before the bath, then dry and comb the whole coat to the skin.</li>
+<li><strong>Every groom:</strong> ask your groomer which zone they found tangled, and move it up your list.</li>
+</ul>
+
+<h2>Common mistakes that let mats build</h2>
+<ul>
+<li><strong>Brushing only the outside.</strong> The coat looks fluffy while the base felts. Always finish with a comb that reaches the skin.</li>
+<li><strong>Bathing a tangled coat.</strong> Water tightens knots. Brush first, then bathe, then dry completely.</li>
+<li><strong>Brushing dry.</strong> A conditioning or detangling spray protects the hair while you brush.</li>
+<li><strong>Leaving the collar or harness on.</strong> You cannot comb what you cannot reach, and the strap line is a main hotspot.</li>
+<li><strong>Pulling a tight mat with the brush.</strong> Preventive Vet recommends brushing only very small, loose mats, holding the base of the mat so it does not pull on the skin, and working from the end farthest from the skin. Do not cut mats out with scissors unless you have been trained.</li>
+<li><strong>Waiting until the coat is matted everywhere.</strong> At that point a shave-down is the kind option. <a href="https://www.rspcawa.org.au/news/shocking-pictures-of-matted-dog-prompt-pet-care-warning" rel="noopener" target="_blank">RSPCA WA lists Poodles and Poodle crosses</a> among the breeds that need regular washing, clipping and grooming, and warns that long, matted fur can cause discomfort, pain and restricted movement.</li>
+</ul>
+
+<h2>Frequently Asked Questions</h2>
+<details>
+<summary>Where do Poodles get matted the most?</summary>
+<p>Behind the ears, in the armpits, along the collar and harness lines, in the groin and inner thighs, at the tail base and on the back of the rear legs. These are the zones where the coat rubs against itself or against gear.</p>
+</details>
+<details>
+<summary>Do I need to brush my Poodle every day?</summary>
+<p>Not always. Most pet Poodles in a short or medium clip do well with a daily check of the ears and collar line, hotspot line-combing every few days, and a full brush-out around bath day. Long coats and puppies in coat change need more.</p>
+</details>
+<details>
+<summary>Why does my Poodle mat behind the ears even when I brush?</summary>
+<p>The hair behind the ears is often finer and softer than the rest of the coat, and the ear moves against it constantly. A slicker can skim over it, so finish with the fine teeth of a metal comb and check down to the skin.</p>
+</details>
+<details>
+<summary>Which clip is easiest to keep mat-free?</summary>
+<p>A short all-over pet clip, because almost nothing is long enough to knot except the ears, topknot and tail. A lamb clip with shorter legs is a middle ground.</p>
+</details>
+<details>
+<summary>Do harnesses cause matting in Poodles?</summary>
+<p>They add friction behind the elbows, in the armpits and around the chest. Take the harness off at home and check the strap line every few days.</p>
+</details>
+<details>
+<summary>Should I bathe my Poodle to get mats out?</summary>
+<p>No. Water tightens tangles into tighter mats. Brush and comb the coat out first, then bathe, then dry and comb it completely.</p>
+</details>
+
+<h2>The bottom line</h2>
+<p>Poodle matting hotspots follow a predictable map: friction zones first, soft-hair zones next, and whatever your clip leaves long on top of that. You do not need to brush the whole dog every night. Choose the zones that match your clip, line-comb them to the skin with a spray, rotate them through the week, and keep the full brush-out for bath day. When life gets busy, a shorter clip is a fair choice for both of you.</p>
+
+<div class="ai-note" style="border-left:4px solid #134e4a;background:#f7f9fa;padding:12px 16px;margin:24px 0;font-size:0.9rem;color:#4b5563"><strong>Written by Claire Dubois.</strong> This guide was drafted with the help of AI tools from the sources linked above and checked before publishing.</div>
+
+</article>
+</main><aside class="sb-sidebar">
+    
+    
+
+    <div class="sb-sidebar-about">
+      <strong>About Poodle Guide</strong>
+      Dedicated to Poodle owners and enthusiasts. In-depth guides, care tips, and national dog day coverage.
+    </div>
+
+    <div class="sb-sidebar-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/blog.html">Latest Articles</a></li>
+        <li><a href="/care.html">Poodle Care Guide</a></li>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/sitemap.html">Sitemap</a></li>
+      </ul>
+      <h4>Latest articles</h4><ul><li><a href="/how-much-exercise-does-a-standard-poodle-need.html">How Much Exercise Does a Standard Poodle Need? Daily Needs by Age</a></li><li><a href="/poodle-bloat-risk-compared-to-other-breeds.html">Poodle Bloat Risk Compared to Other Breeds</a></li><li><a href="/poodle-puppy-coat-change-timeline.html">Poodle Puppy Coat Change Timeline: Birth to 18 Months</a></li><li><a href="/standard-poodle-separation-anxiety-how-common.html">Standard Poodle Separation Anxiety: How Common Is It?</a></li></ul>
+    </div>
+  </aside>
+</div>
+
+
+<footer class="sc-footer">
+  <div class="sc-footer-nav">
+    <a href="/">Home</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="/sitemap.html">Sitemap</a>
+  </div>
+  <p>&copy; 2026 poodle-care.github.io &mdash; Poodle Guide. All rights reserved.</p>
+</footer>
+</body>
+</html>
