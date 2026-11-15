@@ -1,9 +1,9 @@
 /* Poodle Guide — editorial system. Ground gypsum, ink, one brass accent. */
-@font-face{font-family:Fraunces;src:url(/assets/fraunces.woff2) format("woff2");font-weight:400 600;font-display:swap}
-@font-face{font-family:Fraunces;src:url(/assets/fraunces-italic.woff2) format("woff2");font-style:italic;font-weight:400 600;font-display:swap}
-@font-face{font-family:Archivo;src:url(/assets/archivo.woff2) format("woff2");font-weight:400 600;font-display:swap}
+@font-face{font-family:Newsreader;src:url(/assets/newsreader.woff2) format("woff2");font-weight:400 600;font-display:swap}
+@font-face{font-family:Newsreader;src:url(/assets/newsreader-italic.woff2) format("woff2");font-style:italic;font-weight:400 600;font-display:swap}
+@font-face{font-family:"Work Sans";src:url(/assets/work-sans.woff2) format("woff2");font-weight:400 600;font-display:swap}
 :root{--ground:#F3EFE7;--ink:#1A1A17;--brass:#A8781F;--soft:#5E5B53;--rule:#D5CEC1;--tint:#EAE4D8;--link:#0066cc;
---display:Fraunces,"Iowan Old Style",Palatino,Georgia,serif;--body:Archivo,"Helvetica Neue",Arial,system-ui,sans-serif;--w:1180px;--pad:32px}
+--display:Newsreader,"Iowan Old Style",Palatino,Georgia,serif;--body:"Work Sans","Helvetica Neue",Arial,system-ui,sans-serif;--w:1180px;--pad:32px}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 body{margin:0;font:400 17px/1.65 var(--body);color:var(--ink);background:var(--ground);text-rendering:optimizeLegibility}
